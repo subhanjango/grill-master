@@ -1,0 +1,30 @@
+<div class="row">
+<div class="col-md-6 row" style="width: {{ grill_width }}px; height : {{ grill_height }}px; background:grey">
+    {{#each valid_grill_items}}
+    <button title="{{ title }}" class="col-xs-12" style="background: greenyellow; width:{{ width }}px; height:{{ height }}px">
+    </button>
+    {{/each}}
+</div>
+<div class="col-md-6" style="overflow-y:scroll;
+height:200px">
+    <label>Items Out Of Grill</label>
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Item Name</th>
+      <th scope="col">Item Width</th>
+      <th scope="col">Item Height</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each in_valid_grill_items}}
+    <tr>
+      <td>{{ title }}</td>
+      <td>{{ width }}</td>
+      <td>{{ height }}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+</div>
+</div>

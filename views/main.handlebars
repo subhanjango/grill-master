@@ -1,0 +1,14 @@
+{{#if calculated_result }}
+{{> result calculated_result }}
+{{/if}}
+<div class="row container">
+    <form method="post" action="/handle">
+    {{> flash-messages }}
+    <div class="col-md-12">
+        <textarea name="data" cols="30" rows="20">
+            {{ textarea_data }}
+        </textarea>
+    <button class="btn btn-info">Submit</button>
+    </div>
+    </form>
+</div>
